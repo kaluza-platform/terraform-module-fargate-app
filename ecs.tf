@@ -153,7 +153,7 @@ module "app_container_definition" {
 module "datadog_container_definition" {
   source                   = "git::https://github.com/cloudposse/terraform-aws-ecs-container-definition.git?ref=tags/0.57.0"
   container_name           = "datadog-agent"
-  container_image          = "datadog/agent:7.16.1"
+  container_image          = "datadog/agent:${var.datadog_agent_version}"
   container_cpu            = "10"
   container_memory         = "128"
   container_memory_reservation = "128"
